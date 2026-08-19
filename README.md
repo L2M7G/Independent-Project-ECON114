@@ -7,11 +7,21 @@ University of California, Santa Cruz
 ECON 114 – Econometrics  
 March 2025
 
+
 ### Overview
 
 This project examines the relationship between economic integration and income inequality using panel data for the period 1996–2019.
 
 The analysis investigates the relationship between trade openness and the Gini index using Fixed Effects and First Difference models. The analysis also considers one-year and five-year lagged measures of trade openness.
+
+
+### Repository Contents
+
+- `ECON_114_Final_Project.pdf` – Final project paper.
+- `Original_Analysis.R` – Original R script used for the analysis.
+- `Bootstrap_Analysis_Refactored.R` – Refactored version of the bootstrap analysis using custom functions to reduce repeated code.
+- `Data/` – Original raw and cleaned data.   
+
 
 ### Data
 
@@ -26,6 +36,7 @@ The analysis uses data from the World Bank DataBank. The primary variables inclu
 
 The analysis covers the post-WTO and pre-COVID period from 1996 to 2019.
 
+
 ### Methods
 
 The project uses:
@@ -37,16 +48,11 @@ The project uses:
 - Bootstrap estimation with 10,000 replications
 - Standard errors clustered at the country level
 
-### Repository Contents
-
-- `ECON_114_Final_Project.pdf` – Final project paper.
-- `Original_Analysis.R` – Original R script used for the analysis.
-- `Bootstrap_Analysis_Refactored.R` – Refactored version of the bootstrap analysis using custom functions to reduce repeated code.
-- `Data/` – Original raw and cleaned data.   
 
 ### Refactored Versions
 
 The repository includes refactored versions of selected sections from the original project code. The original code is retained for transparency and reproducibility, while the refactored versions use custom functions to reduce repeated code and simplify the analysis.
+
 
 #### Refactoring Notes
 
@@ -59,3 +65,4 @@ The refactored bootstrap analysis:
 
 The refactored clustered standard errors analysis:
 ...
+
