@@ -27,7 +27,7 @@ library(gridExtra)
 
 ## Gini
 
-gini_raw <- read_excel("gini_raw.xlsx", na = "..")
+gini_raw <- read_excel("data/raw/gini_raw.xlsx", na = "..")
 
 
 # Pivot to wide 
@@ -81,6 +81,10 @@ length(unique(gini_complete$country))
 
 
 gini_complete <- pdata.frame(gini_complete, index = c("country", "year"))
+
+
+write_csv(gini_complete, "data/cleaned/gini_complete.csv")
+
 
 
 # Summary Statistics and Plots
@@ -423,45 +427,45 @@ alpha <- 0.05
 
 # 1 Year Lag
 
-fe_ci_upper_boostrap_1 <- quantile(x = results_fe_1, probs = 1-alpha/2)
-fe_ci_lower_boostrap_1 <- quantile(x = results_fe_1, probs = alpha/2)
+fe_ci_upper_bootstrap_1 <- quantile(x = results_fe_1, probs = 1-alpha/2)
+fe_ci_lower_bootstrap_1 <- quantile(x = results_fe_1, probs = alpha/2)
 
-fe_controls_ci_upper_boostrap_1 <- quantile(x = results_fe_controls_1, probs = 1-alpha/2)
-fe_controls_ci_lower_boostrap_1 <- quantile(x = results_fe_controls_1, probs = alpha/2)
+fe_controls_ci_upper_bootstrap_1 <- quantile(x = results_fe_controls_1, probs = 1-alpha/2)
+fe_controls_ci_lower_bootstrap_1 <- quantile(x = results_fe_controls_1, probs = alpha/2)
 
-fd_ci_upper_boostrap_1 <- quantile(x = results_fd_1, probs = 1-alpha/2)
-fd_ci_lower_boostrap_1 <- quantile(x = results_fd_1, probs = alpha/2)
+fd_ci_upper_bootstrap_1 <- quantile(x = results_fd_1, probs = 1-alpha/2)
+fd_ci_lower_bootstrap_1 <- quantile(x = results_fd_1, probs = alpha/2)
 
-fd_controls_ci_upper_boostrap_1 <- quantile(x = results_fd_controls_1, probs = 1-alpha/2)
-fd_controls_ci_lower_boostrap_1 <- quantile(x = results_fd_controls_1, probs = alpha/2)
+fd_controls_ci_upper_bootstrap_1 <- quantile(x = results_fd_controls_1, probs = 1-alpha/2)
+fd_controls_ci_lower_bootstrap_1 <- quantile(x = results_fd_controls_1, probs = alpha/2)
 
 
 # 5 Year Lag
 
-fe_ci_upper_boostrap_5 <- quantile(x = results_fe_5, probs = 1-alpha/2)
-fe_ci_lower_boostrap_5 <- quantile(x = results_fe_5, probs = alpha/2)
+fe_ci_upper_bootstrap_5 <- quantile(x = results_fe_5, probs = 1-alpha/2)
+fe_ci_lower_bootstrap_5 <- quantile(x = results_fe_5, probs = alpha/2)
 
-fe_controls_ci_upper_boostrap_5 <- quantile(x = results_fe_controls_5, probs = 1-alpha/2)
-fe_controls_ci_lower_boostrap_5 <- quantile(x = results_fe_controls_5, probs = alpha/2)
+fe_controls_ci_upper_bootstrap_5 <- quantile(x = results_fe_controls_5, probs = 1-alpha/2)
+fe_controls_ci_lower_bootstrap_5 <- quantile(x = results_fe_controls_5, probs = alpha/2)
 
-fd_ci_upper_boostrap_5 <- quantile(x = results_fd_5, probs = 1-alpha/2)
-fd_ci_lower_boostrap_5 <- quantile(x = results_fd_5, probs = alpha/2)
+fd_ci_upper_bootstrap_5 <- quantile(x = results_fd_5, probs = 1-alpha/2)
+fd_ci_lower_bootstrap_5 <- quantile(x = results_fd_5, probs = alpha/2)
 
-fd_controls_ci_upper_boostrap_5 <- quantile(x = results_fd_controls_5, probs = 1-alpha/2)
-fd_controls_ci_lower_boostrap_5 <- quantile(x = results_fd_controls_5, probs = alpha/2)
+fd_controls_ci_upper_bootstrap_5 <- quantile(x = results_fd_controls_5, probs = 1-alpha/2)
+fd_controls_ci_lower_bootstrap_5 <- quantile(x = results_fd_controls_5, probs = alpha/2)
 
 
 ci_bootstrap_lag_1 <- data.frame(
   Model = c("Fixed Effects", "Fixed Effects With Controls", "First Difference", "First Difference With Controls"),
-  Lower_Bound = c(fe_ci_lower_boostrap_1, fe_controls_ci_lower_boostrap_1, fd_ci_lower_boostrap_1, fd_controls_ci_lower_boostrap_1),
-  Upper_Bound = c(fe_ci_upper_boostrap_1, fe_controls_ci_upper_boostrap_1, fd_ci_upper_boostrap_1, fd_controls_ci_upper_boostrap_1)
+  Lower_Bound = c(fe_ci_lower_bootstrap_1, fe_controls_ci_lower_bootstrap_1, fd_ci_lower_bootstrap_1, fd_controls_ci_lower_bootstrap_1),
+  Upper_Bound = c(fe_ci_upper_bootstrap_1, fe_controls_ci_upper_bootstrap_1, fd_ci_upper_bootstrap_1, fd_controls_ci_upper_bootstrap_1)
 )
 
 
 ci_bootstrap_lag_5 <- data.frame(
   Model = c("Fixed Effects", "Fixed Effects With Controls", "First Difference", "First Difference With Controls"),
-  Lower_Bound = c(fe_ci_lower_boostrap_5, fe_controls_ci_lower_boostrap_5, fd_ci_lower_boostrap_5, fd_controls_ci_lower_boostrap_5),
-  Upper_Bound = c(fe_ci_upper_boostrap_5, fe_controls_ci_upper_boostrap_5, fd_ci_upper_boostrap_5, fd_controls_ci_upper_boostrap_5)
+  Lower_Bound = c(fe_ci_lower_bootstrap_5, fe_controls_ci_lower_bootstrap_5, fd_ci_lower_bootstrap_5, fd_controls_ci_lower_bootstrap_5),
+  Upper_Bound = c(fe_ci_upper_bootstrap_5, fe_controls_ci_upper_bootstrap_5, fd_ci_upper_bootstrap_5, fd_controls_ci_upper_bootstrap_5)
 )
 
 
