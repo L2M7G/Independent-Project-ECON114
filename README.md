@@ -1,10 +1,10 @@
 # ECON 114 Final Project
 
-## Exploring the Role of Economic Integration in Inequality
+## Exploring the Role of Economic Integration in Inequality: A Fixed Effects and First Difference Analysis of Trade Openness and the Gini Index 
 
 **Louisa Gallagher**  
 University of California, Santa Cruz  
-ECON 114 – Econometrics  
+ECON 114 – Advanced Quantitative Methods  
 March 2025
 
 
