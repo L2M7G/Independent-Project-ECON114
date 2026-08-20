@@ -64,5 +64,7 @@ The refactored bootstrap analysis:
 - Produces the same bootstrap analysis as the original code while reducing code repetition, making the code easier to modify and clearer to read.  
 
 The refactored clustered standard errors analysis:
-...
-
+- Uses separate custom functions to calculate clustered standard errors for fixed-effects and first-difference models, accounting for differences in coefficient indexing.
+- Uses a custom function to calculate confidence intervals from the estimated coefficients and clustered standard errors.
+- Reuses these functions across the 1-year and 5-year lag specifications to reduce repeated calculations.
+- Produces the same clustered standard errors and confidence intervals as the original code while reducing code repetition and making the analysis easier to modify and read.
