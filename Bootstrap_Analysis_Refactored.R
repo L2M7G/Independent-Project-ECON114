@@ -1,7 +1,7 @@
 ##### For ECON 114 Final Project #####
 ### Louisa Gallagher
 
-# Simplified bootstrap procedure using a custom function
+# Simplified bootstrap procedure using custom functions
 
 
 set.seed(8545)
@@ -201,17 +201,13 @@ ggsave("plot_boot_lag_1.png", plot = boot_lag_1)
 
 ggsave("plot_boot_lag_5.png", plot = boot_lag_5)
 
-################################################
-################################################
-################################################
+
 
 # Bootstrap CI
 
-alpha <- 0.05
-
 # Function to calculate upper and lower bounds
 
-bootstrap_ci <- function(results) {
+bootstrap_ci <- function(results, alpha = 0.05) {
   
   lower <- quantile(x = results, probs = alpha/2)
   upper <- quantile(x = results, probs = 1 - alpha/2)
