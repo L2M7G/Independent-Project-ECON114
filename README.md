@@ -18,8 +18,9 @@ The analysis investigates the relationship between trade openness and the Gini i
 ### Repository Contents
 
 - [ECON 114 Final Project](ECON_114_Final_Project.pdf) – Final project paper.
-- [Original Analysis](Original_Analysis.R) – Original R script used for the analysis.
+- [Original Analysis](Gallagher_114_Final_Project.R) – Original R script used for the analysis.
 - [Bootstrap Analysis Refactored](Bootstrap_Analysis_Refactored.R) – Refactored version of the bootstrap analysis using custom functions to reduce repeated code.
+- [Clustered Analysis Refactored](Clustered_Analysis_Refactored.R) – Refactored version of the clustered analysis using custom functions to reduce repeated code.
 - [Data](Data/) – Original raw and cleaned data.   
   
 
