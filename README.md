@@ -14,6 +14,7 @@ This project examines the relationship between economic integration and income i
 
 The analysis investigates the relationship between trade openness and the Gini index using Fixed Effects and First Difference models. The analysis also considers one-year and five-year lagged measures of trade openness.
 
+---
 
 ### Repository Contents
 
@@ -22,7 +23,8 @@ The analysis investigates the relationship between trade openness and the Gini i
 - [Bootstrap Analysis Refactored](Bootstrap_Analysis_Refactored.R) – Refactored version of the bootstrap analysis using custom functions to reduce repeated code.
 - [Clustered Analysis Refactored](Clustered_SE_Refactored.R) – Refactored version of the clustered analysis using custom functions to reduce repeated code.
 - [Data](Data/) – Original raw and cleaned data.   
-  
+
+---
 
 ### Data
 
@@ -37,6 +39,9 @@ The analysis uses data from the World Bank DataBank. The primary variables inclu
 
 The analysis covers the post-WTO and pre-COVID period from 1996 to 2019.
 
+**Data Source:** World Bank. *World Development Indicators*. World Bank Group. https://databank.worldbank.org/source/world-development-indicators
+
+---
 
 ### Methods
 
@@ -49,6 +54,7 @@ The project uses:
 - Bootstrap estimation with 10,000 replications
 - Standard errors clustered at the country level
 
+---
 
 ### Refactored Versions
 
